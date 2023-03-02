@@ -1,0 +1,5 @@
+#hypervisor=$(echo "$tmp" | grep "Hypervisor vendor:" | cut -d':' -f2 | xargs)
+#hypervisor=$(lscpu | grep "Hypervisor vendor:" | cut -d':' -f2 | xargs )
+#tmp=$(sshpass -p "$password" ssh "$username@$host" "systemd-detect-virt")
+#if grep -q "$hypervisor" hypervisor_list.txt; then
+if grep -q "^$hypervisor$" hypervisor_list.txt; then
